@@ -1,1 +1,24 @@
-e537188a9977488fffd9d66943070578
+# Weather App 🌤️
+This project uses the **OpenWeather REST API** to fetch real-time weather data.
+
+## Features
+- Search by city name
+- Loading & error states
+- Displays temperature, humidity, wind, and condition
+- Responsive design with Nature Inspired colors
+
+## API Used
+- [OpenWeather API](https://openweathermap.org/api)
+- Endpoint: `https://api.openweathermap.org/data/2.5/weather`
+- Parameters: `q` (city), `units=metric`
+
+## Tech Stack
+- HTML5
+- CSS3 (Nature Inspired Colors)
+- JavaScript (Fetch API)
+- Bootstrap (for responsiveness)
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/weather-app.git
