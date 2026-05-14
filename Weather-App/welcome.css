@@ -1,0 +1,31 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(130deg, #a980ca, #dbd072); 
+  margin: 0;
+  color:#fff;
+}
+
+#welcome-screen {
+  animation: fadeIn 2s ease forwards;
+}
+
+#start-btn {
+  background: rgba(199, 74, 74, 0.2);
+  backdrop-filter: blur(12px);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #d05d5d;
+  transition: 0.3s ease;
+}
+#start-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #985555;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

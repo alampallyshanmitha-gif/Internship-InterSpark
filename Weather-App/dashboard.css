@@ -1,0 +1,31 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(145deg, #f37d72, #4bc6eb); 
+  margin: 0;
+  color: #d6d0d0;
+  transition: background 1s ease;
+}
+
+.bg-glass {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(232, 228, 228, 0.3);
+}
+
+#weekly-forecast div {
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  flex: 1 0 80px;
+}
+.chart-card {
+  height: 250px;
+}
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}

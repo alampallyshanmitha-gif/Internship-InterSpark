@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="welcome.css" id="theme-css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Welcome Screen -->
+  <div id="welcome-screen" class="d-flex flex-column justify-content-center align-items-center vh-100 text-center">
+    <h1 class="display-4 fw-bold text-light">Weather Forecasts</h1>
+    <p class="lead text-light">Fresh insights into today & the week ahead</p>
+    <button id="start-btn" class="btn btn-lg btn-light mt-3">Get Started</button>
+  </div>
+  <!-- Dashboard -->
+  <div id="dashboard" class="container-fluid py-4 d-none">
+    <h2 class="text-center mb-4 text-light">Weather Dashboard</h2>
+
+    <!-- Search Bar -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-6">
+        <div class="input-group">
+          <input type="text" id="search-input" class="form-control" placeholder="Search city...">
+          <button id="search-btn" class="btn btn-success">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Split Layout -->
+    <div class="row">
+      <!-- Left: Today’s Report -->
+      <div class="col-md-6">
+        <div class="card bg-glass text-center text-light mb-4">
+          <div class="card-body">
+            <h4 id="city">City</h4>
+            <p id="temperature">-- °C (Feels like -- °C)</p>
+            <p id="condition">Condition</p>
+            <p id="humidity">Humidity: --%</p>
+            <p id="wind">Wind: -- km/h</p>
+            <p id="fog">Fog Level: --</p>
+            <p id="rain">Rain Chance: --%</p>
+            <p id="uv">UV Index: --</p>
+            <p id="sunrise">Sunrise: --</p>
+            <p id="sunset">Sunset: --</p>
+            <p id="aqi">Air Quality: --</p>
+            <p id="alerts">Alerts: None</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Weekly Forecast -->
+      <div class="col-md-6">
+        <h5 class="text-light">Weekly Forecast</h5>
+        <div id="weekly-forecast" class="d-grid grid-template-columns-7 gap-2"></div>
+      </div>
+    </div>
+
+    <!-- Graphs -->
+    <div class="row mt-4">
+      <div class="col-md-6 mb-3">
+        <div class="chart-card bg-glass p-3">
+          <h6 class="text-light text-center">Temperature Trend</h6>
+          <canvas id="tempChart"></canvas>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="chart-card bg-glass p-3">
+          <h6 class="text-light text-center">Rain Probability</h6>
+          <canvas id="rainChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logs -->
+    <div class="logs mt-4 p-3 bg-glass text-light rounded">
+      <h5>Related Logs</h5>
+      <ul id="logs-list" class="list-unstyled"></ul>
+      <button id="download-logs" class="btn btn-sm btn-light mt-2">Download Logs</button>
+      <button id="download-forecast" class="btn btn-sm btn-warning mt-2">Download Forecast</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
