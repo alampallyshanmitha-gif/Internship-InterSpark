@@ -1,6 +1,7 @@
 # Weather App 🌤️
 This project uses the **OpenWeather REST API** to fetch real-time weather data.
 
+
 ## Features
 - Search by city name
 - Loading & error states
